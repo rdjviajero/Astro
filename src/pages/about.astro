@@ -1,4 +1,7 @@
 ---
+// import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "Mas Sobre Mi";
@@ -42,9 +45,11 @@ const textCase = "uppercase"
         </style>
 	</head>
 	<body>
-        <a href="/">Inicio</a>
+        <!-- <a href="/">Inicio</a>
         <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Mi Blog</a>		
+        <a href="/blog/">Mi Blog</a> -->
+        <!-- <Navigation/> -->
+        <Header/>
 
 		<h1>{pageTitle}</h1>
         <h2>... ¡y mi nuevo sitio Astro:!</h2>
@@ -68,6 +73,14 @@ const textCase = "uppercase"
         {finished && <p>¡He terminado este tutorial!</p>}
         {goal === 3 && <p>¡Termine en tres dias!</p>}
         
-
+        <Footer/>
+        <Footer />
+        <script>
+        //   document.querySelector('.hamburger').addEventListener('click', () => {
+        //     document.querySelector('.nav-links').classList.toggle('expanded');
+        //   });
+            import "../scripts/menu.js";
+        </script>
+      </body>
     </body>
 </html>
