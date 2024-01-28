@@ -1,4 +1,6 @@
 ---
+// import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 const pageTlitle="Pagina de Inicio"
 ---
@@ -12,10 +14,18 @@ const pageTlitle="Pagina de Inicio"
 		<title>{pageTlitle}</title>
 	</head>
 	<body>
-		<a href="/">Inicio</a>
+		<!-- <a href="/">Inicio</a>
 		<a href="/about/">Sobre mi</a>
-		<a href="/blog/">Mi Blog</a>		
-		
+		<a href="/blog/">Mi Blog</a>		 -->
+		<!-- <Navigation/> -->
+		<Header/>
 		<h1>{pageTlitle}</h1>
+		<script>
+		//   document.querySelector('.hamburger').addEventListener('click', () => {
+		// 	document.querySelector('.nav-links').classList.toggle('expanded');
+		//   });
+			import "../scripts/menu.js";
+		</script>
+	  </body>
 	</body>
 </html>
