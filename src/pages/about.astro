@@ -1,19 +1,66 @@
 ---
-// import Navigation from '../components/Navigation.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-
-const pageTitle = "Mas Sobre Mi";
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle="Mas sobre mi";
 const identity = {
   firstName: "Juan David",
   country: "Colombia",
   occupation: "Comerciante",
   hobbies: ["Paintball", "Paraglading", "Movies"],
 };
-
 const skills = ["HTML", "CSS", "JavaScript", "Astro"];
+const happy = true;
+const finished = false;
+const goal = 3;
+
+// const skillColor ="red";
+// const fontWeight = "bold";
+// const textCase = "uppercase"
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    
+        <h2>... ¡y mi nuevo sitio Astro:!</h2>
+
+        <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
+
+        <p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!</p>
+        <p>He aqui algunos datos sobre mi:</p>
+        <ul>
+            <li>Me llamo {identity.firstName}.</li>
+            <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+            {identity.hobbies.length >= 2 && 
+                <li>Dos de mis hobbies son: {identity.hobbies[0]} y {identity.hobbies[1]}.</li>
+            }
+        </ul>
+        <p>Mis Habilidades Son:</p>
+        <ul>
+            {skills.map((skill)=><li class="skill">{skill}</li>)}
+        </ul>
+        {happy && <p>¡Estoy Feliz de aprender Astro!</p>}
+        {finished && <p>¡He terminado este tutorial!</p>}
+        {goal === 3 && <p>¡Termine en tres dias!</p>}
+
+</BaseLayout>
+
+
+
+
+<!-- ---
+import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const pageTitle = "Mas Sobre Mi"; -->
+
+<!-- const identity = {
+  firstName: "Juan David",
+  country: "Colombia",
+  occupation: "Comerciante",
+  hobbies: ["Paintball", "Paraglading", "Movies"],
+}; -->
+
+<!-- const skills = ["HTML", "CSS", "JavaScript", "Astro"];
 
 const happy = true;
 const finished = false;
@@ -22,10 +69,10 @@ const goal = 3;
 const skillColor ="red";
 const fontWeight = "bold";
 const textCase = "uppercase"
----
+--- -->
 
-<html lang="en">
-	<head>
+<!-- <html lang="en"> -->
+	<!-- <head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
@@ -43,15 +90,15 @@ const textCase = "uppercase"
                 text-transform: var(--textCase);
             }
         </style>
-	</head>
-	<body>
+	</head> -->
+	<!-- <body> -->
         <!-- <a href="/">Inicio</a>
         <a href="/about/">Sobre mi</a>
         <a href="/blog/">Mi Blog</a> -->
         <!-- <Navigation/> -->
-        <Header/>
+        <!-- <Header/> -->
 
-		<h1>{pageTitle}</h1>
+		<!-- <h1>{pageTitle}</h1>
         <h2>... ¡y mi nuevo sitio Astro:!</h2>
 
         <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
@@ -73,14 +120,14 @@ const textCase = "uppercase"
         {finished && <p>¡He terminado este tutorial!</p>}
         {goal === 3 && <p>¡Termine en tres dias!</p>}
         
-        <Footer/>
-        <Footer />
-        <script>
-        //   document.querySelector('.hamburger').addEventListener('click', () => {
-        //     document.querySelector('.nav-links').classList.toggle('expanded');
-        //   });
+        <Footer/> -->
+        
+        <!-- <script>
+          document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('expanded');
+          });
             import "../scripts/menu.js";
-        </script>
-      </body>
+        </script> -->
+      <!-- </body>
     </body>
-</html>
+</html> -->

@@ -1,4 +1,33 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Página de inicio";
+---
+<BaseLayout pageTitle = {pageTitle}>
+  <h2>Mi impresionante subtítulo del blog</h2>
+</BaseLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---
 // import Navigation from '../components/Navigation.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
@@ -14,18 +43,18 @@ const pageTlitle="Pagina de Inicio"
 		<title>{pageTlitle}</title>
 	</head>
 	<body>
-		<!-- <a href="/">Inicio</a>
+		<-- <a href="/">Inicio</a>
 		<a href="/about/">Sobre mi</a>
 		<a href="/blog/">Mi Blog</a>		 -->
 		<!-- <Navigation/> -->
-		<Header/>
-		<h1>{pageTlitle}</h1>
-		<script>
-		//   document.querySelector('.hamburger').addEventListener('click', () => {
-		// 	document.querySelector('.nav-links').classList.toggle('expanded');
-		//   });
+		<!-- <Header/>-->
+		<!-- <h1>{pageTlitle}</h1> -->
+		<!-- <script> 
+		  document.querySelector('.hamburger').addEventListener('click', () => {
+			document.querySelector('.nav-links').classList.toggle('expanded');
+		  });
 			import "../scripts/menu.js";
-		</script>
-	  </body>
+		</script -->
+	  <!-- </body>
 	</body>
-</html>
+</html>  -->
